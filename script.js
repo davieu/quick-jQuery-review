@@ -42,11 +42,7 @@ $(document).ready(function() {
 	console.log($('img').attr('border'))
 	console.log($('img').css('border'))
 
-	//val() method returns the value
-	//click() function
-	// $('#sometext').val('yo')
-	// console.log($('#sometext').val())
-
+	//
 	$('#inputVal').css('visibility', 'hidden')
 	$('button').attr('disabled',true);
 	$('#sometext').keyup(function(){
@@ -57,39 +53,9 @@ $(document).ready(function() {
 	})
 
 	$('button').click(function() {
-	// alert('Value: ' + $('#sometext').val())
+	alert('Value: ' + $('#sometext').val())
 	$('#inputVal').css('visibility', 'visible')
 	$('#inputVal').text($('#sometext').val())
 	})
-
-
-	// let inputVal = $('#sometext').val()
-	// $('#sometext').keyup(function() {
-	// 	let empty = false
-	// 	$('#somtext').each(function() {
-	// 		if ($(this).val().length == 0) {
-	// 			empty = true;
-	// 		}
-	// 	})
-	// 	if (empty) {
-	// 		$('.actions input').attr('disabled', 'disabled');
-	// 	} else {
-	// 		$('.actions input').removeAttr('disabled');
-	// 		console.log('VAL: ', $('#sometext').val().length)
-	// 		alert('Value: ' + $('#sometext').val())
-	// 	}
-	// })
-
-	// console.log(inputVal.length)
-	// if (inputVal.length < 1) {
-	// 	console.log('nope')
-	// } else if (inputVal.length > 2) {
-	// 	$('button').click(function() {
-	// 		// alert('Value: ' + $('#sometext').val())
-	// 		// $('img').css('border', '5px dashed black')
-	// 		console.log('VAL: ', $('#sometext').val().length)
-	// 	})
-	// }
-	
 
 })
