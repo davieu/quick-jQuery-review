@@ -8,8 +8,7 @@ $(document).ready(function() {
 
 	let imgSize = {
 		width: '200',
-		height: '200',
-		display: 'block'
+		height: '200'
 	};
 
 	//change css styling or return properties
@@ -18,7 +17,7 @@ $(document).ready(function() {
 	console.log($('h1').css('background'));
 	$('h1').css(design);
 	$('img').css(imgSize);
-	$('.puppers').css('float', 'left');
+	// $('.puppers').css('float', 'left');
 
 	//add content before or after a selector
 	$('ul').before('<h2>My favorite dogs!</h2>');
@@ -92,11 +91,28 @@ $(document).ready(function() {
 		$('#typing1').show();
 	});
 
-
 	//on() off()
 	//keypress() keydown() keyup()
 	$('#press2').on('keypress', function() {
 		$('#typing2').hide();
+	});
+
+	$('#fadeOut-btn').click(function() {
+		$('.img1').fadeOut('slow');
+		$('.img2').fadeOut('fast');
+		$('.img3').fadeOut('slow');
 	})
 
+	$('#fadeIn-btn').click(function() {
+		$('.img1').fadeIn('slow');
+		$('.img3').fadeIn('slow');
+		$('.img2').fadeIn('fast');
+	})
+
+	$('.fade-btn').click(function() {
+		$('#one').fadeIn();
+		$('#two').fadeIn('slow');
+		$('#three').fadeIn(3000);
+	})
+	
 });
