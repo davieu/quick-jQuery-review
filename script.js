@@ -74,5 +74,29 @@ $(document).ready(function() {
 		$('img').toggleClass('styleclass')
 	})
 
+	//hides the specific image you click on with 'this'
+	$('img').click(function() {
+		$(this).hide();
+	})
+
+	//just toggles the imgages. hide/show
+	$('#reset-img-btn').click(function() {
+		$('img').toggle();
+	})
+
+	//testing keyup for dynamic DOM
+	$('#press').keyup(function(){
+		if($(this).val().length != 0) {
+			$('#typing1').hide();  
+		}	else
+		$('#typing1').show();
+	});
+
+
+	//on() off()
+	//keypress() keydown() keyup()
+	$('#press2').on('keypress', function() {
+		$('#typing2').hide();
+	})
 
 });
