@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+	//short for $(document).ready(function(){})
+	/*
+	$(function() {
+		$('#drag').draggable();
+	});
+	*/
+
 	let design = {
 		color: 'blue',
 		background: 'green',
@@ -16,7 +23,7 @@ $(document).ready(function() {
 	$('h1').css('background', 'blue');
 	console.log($('h1').css('background'));
 	$('h1').css(design);
-	$('img').css(imgSize);
+	$('.pets').css(imgSize);
 	// $('.puppers').css('float', 'left');
 
 	//add content before or after a selector
@@ -37,18 +44,18 @@ $(document).ready(function() {
 	$('li:last').html('Corgi');
 
 	//attr() method
-	$('img').attr('border', '5px solid black');
-	console.log($('img').attr('border'));
-	console.log($('img').css('border'));
+	$('.pets').attr('border', '5px solid black');
+	console.log($('.pets').attr('border'));
+	console.log($('.pets').css('border'));
 
 	//disable button when page is loaded, if input val() length === 0 then disable button
 	$('#inputVal').css('visibility', 'hidden');
 	$('#alert-submit').attr('disabled',true);
 	$('#sometext').keyup(function(){
-			if($(this).val().length != 0)
-					$('#alert-submit').attr('disabled', false);            
-			else
-					$('#alert-submit').attr('disabled',true);
+		if($(this).val().length != 0)
+				$('#alert-submit').attr('disabled', false);            
+		else
+				$('#alert-submit').attr('disabled',true);
 	});
 
 	//click function to alert the val of input
@@ -60,27 +67,27 @@ $(document).ready(function() {
 
 	//adding classes 
 	$('#addClass-submit').click(function() {
-		$('img').addClass('styleclass');
+		$('.pets').addClass('styleclass');
 	});
 
 	//remove class
 	$('#removeClass-submit').click(function() {
-		$('img').removeClass('styleclass')
+		$('.pets').removeClass('styleclass')
 	})
 
 	//toggle class
 	$('#toggleClass-submit').click(function() {
-		$('img').toggleClass('styleclass')
+		$('.pets').toggleClass('styleclass')
 	})
 
 	//hides the specific image you click on with 'this'
-	$('img').click(function() {
+	$('.pets').click(function() {
 		$(this).hide();
 	})
 
 	//just toggles the imgages. hide/show
 	$('#reset-img-btn').click(function() {
-		$('img').toggle();
+		$('.pets').toggle();
 	})
 
 	//testing keyup for dynamic DOM
@@ -97,6 +104,7 @@ $(document).ready(function() {
 		$('#typing2').hide();
 	});
 
+	//fadeOut() fadeIn() fadeToggle()
 	$('#fadeOut-btn').click(function() {
 		$('.img1').fadeOut('slow');
 		$('.img2').fadeOut('fast');
@@ -121,6 +129,7 @@ $(document).ready(function() {
 		$('#three').fadeOut(3000);
 	});
 
+	//slideUp() slideDown() slideToggle()
 	$('#slideUp-btn').on('click', function() {
 		$('#div1').slideUp('slow');
 	});
@@ -130,5 +139,19 @@ $(document).ready(function() {
 	$('#slideToggle-btn').on('click', function() {
 		$('#div1').slideToggle('slow');
 	});
+
+	//draggable() droppable()
+	$(function() {
+		$('#drag').draggable();
+		$('#drop').droppable();
+	});
 	
+
+	$(function() {
+		$('#drag-img').draggable();
+	});
+
+	//datepicker()
+	$('#date').datepicker()
+
 });
