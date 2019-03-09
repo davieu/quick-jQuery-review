@@ -109,10 +109,26 @@ $(document).ready(function() {
 		$('.img2').fadeIn('fast');
 	})
 
-	$('.fade-btn').click(function() {
+	$('.fadeIn-colors-btn').click(function() {
 		$('#one').fadeIn();
 		$('#two').fadeIn('slow');
 		$('#three').fadeIn(3000);
 	})
+
+	$('.fadeOut-colors-btn').click(function() {
+		$('#one').fadeOut();
+		$('#two').fadeOut('slow');
+		$('#three').fadeOut(3000);
+	});
+
+	$('#slideUp-btn').on('click', function() {
+		$('#div1').slideUp('slow');
+	});
+	$('#slideDown-btn').on('click', function() {
+		$('#div1').slideDown('slow');
+	});
+	$('#slideToggle-btn').on('click', function() {
+		$('#div1').slideToggle('slow');
+	});
 	
 });
